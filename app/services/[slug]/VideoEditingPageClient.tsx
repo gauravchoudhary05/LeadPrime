@@ -559,7 +559,7 @@ export default function VideoEditingPageClient() {
 
               {/* Email */}
               <a
-                href="mailto:hello@leadprime.com"
+                href="mailto:founder@leadprime.pro"
                 className="m-card p-5 flex items-center gap-4 block"
               >
                 <div className="m-icon-container">✉️</div>
@@ -567,7 +567,7 @@ export default function VideoEditingPageClient() {
                   <div className="text-[13px] font-semibold uppercase tracking-wider" style={{ color: 'var(--m-text-muted)' }}>
                     Email
                   </div>
-                  <div className="text-[15px] text-white font-medium">hello@leadprime.com</div>
+                  <div className="text-[15px] text-white font-medium">founder@leadprime.pro</div>
                 </div>
               </a>
 

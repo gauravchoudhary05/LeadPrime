@@ -78,11 +78,29 @@ export const useLeadStore = create<LeadFormState>((set, get) => ({
     set({ isSubmitting: true, errors: {}, hasError: false });
 
     try {
-      // TODO: Replace with actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Submit via FormSubmit to leadprime7@gmail.com
+      const requestBody = {
+        name: result.data.name,
+        email: result.data.email,
+        phone: result.data.phone,
+        company: result.data.company || 'Not provided',
+        service: result.data.service || 'Not specified',
+        budget: result.data.budget || 'Not specified',
+        message: result.data.message || 'No message provided'
+      };
 
-      // Simulate successful submission
-      console.log('[LeadPrime] Form submitted:', result.data);
+      const res = await fetch('https://formsubmit.co/ajax/leadprime7@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to submit form');
+      }
 
       set({ isSubmitting: false, isSuccess: true });
 

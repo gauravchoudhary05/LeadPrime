@@ -85,7 +85,8 @@ export default function LeadCaptureForm({
           </motion.p>
         </div>
 
-        {/* Form Card */}
+
+        {/* ── Inline Calendly Embed ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +94,30 @@ export default function LeadCaptureForm({
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
+          <div className="card-base overflow-hidden" style={{ borderRadius: 16 }}>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=0f0f0f&text_color=ffffff&primary_color=00E5C3"
+              style={{ minWidth: 320, height: 700 }}
+            />
+          </div>
+        </motion.div>
+
+        {/* Form Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="max-w-2xl mx-auto mt-12"
+        >
+          
+          <p className="text-center text-[14px] text-[#94A3B8] mb-4">
+            Or send us your details and{' '}
+            <span className="text-[#00E5C3] font-semibold">we'll get back to you</span>:
+          </p>
           <div className="card-base p-8 lg:p-10">
+
             {/* Success State */}
             {isSuccess ? (
               <motion.div
@@ -273,28 +297,6 @@ export default function LeadCaptureForm({
                 </p>
               </form>
             )}
-          </div>
-        </motion.div>
-
-        {/* ── Inline Calendly Embed ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-2xl mx-auto mt-12"
-        >
-          <p className="text-center text-[14px] text-[#94A3B8] mb-4">
-            Or skip the form and{' '}
-            <span className="text-[#00E5C3] font-semibold">book a call directly</span>:
-          </p>
-          <div className="card-base overflow-hidden" style={{ borderRadius: 16 }}>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=0f0f0f&text_color=ffffff&primary_color=00E5C3"
-              style={{ minWidth: 320, height: 700 }}
-            />
-            {/* Calendly script is already loaded globally by CalendlyWidgets */}
           </div>
         </motion.div>
       </div>
