@@ -16,7 +16,7 @@ declare global {
   }
 }
 
-const CALENDLY_URL = 'https://calendly.com/team-leadprime/30min';
+const CALENDLY_URL = 'https://calendly.com/founder-leadprime/30min';
 
 /**
  * Opens the Calendly popup modal.

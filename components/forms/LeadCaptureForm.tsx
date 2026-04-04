@@ -291,7 +291,7 @@ export default function LeadCaptureForm({
           <div className="card-base overflow-hidden" style={{ borderRadius: 16 }}>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/team-leadprime/30min?hide_gdpr_banner=1&background_color=0f0f0f&text_color=ffffff&primary_color=00E5C3"
+              data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=0f0f0f&text_color=ffffff&primary_color=00E5C3"
               style={{ minWidth: 320, height: 700 }}
             />
             {/* Calendly script is already loaded globally by CalendlyWidgets */}

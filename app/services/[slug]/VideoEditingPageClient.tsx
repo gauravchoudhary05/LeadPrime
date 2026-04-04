@@ -586,7 +586,7 @@ export default function VideoEditingPageClient() {
             >
               <div
                 className="calendly-inline-widget"
-                data-url="https://calendly.com/team-leadprime/30min?hide_gdpr_banner=1&background_color=050810&text_color=ffffff&primary_color=00F5D4"
+                data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=050810&text_color=ffffff&primary_color=00F5D4"
                 style={{ minWidth: 320, height: 700 }}
               />
             </motion.div>
