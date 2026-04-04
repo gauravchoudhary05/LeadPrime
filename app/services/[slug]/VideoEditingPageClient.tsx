@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, useInView, useSpring, useMotionValue } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
 import { openCalendlyPopup } from '@/components/ui/CalendlyWidgets';
+import ContactFormCard from '@/components/forms/ContactFormCard';
 
 /* ════════════════════════════════════════════════════════════════════════
  *  DATA
@@ -577,18 +578,24 @@ export default function VideoEditingPageClient() {
               </button>
             </motion.div>
 
-            {/* Right — Inline Calendly Embed */}
+            {/* Right — Inline Calendly Embed & Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="m-glass overflow-hidden"
+              className="flex flex-col gap-6"
             >
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=050810&text_color=ffffff&primary_color=00F5D4"
-                style={{ minWidth: 320, height: 700 }}
-              />
+              <div className="m-glass overflow-hidden" style={{ borderRadius: 16, width: "100%" }}>
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/founder-leadprime/30min?hide_gdpr_banner=1&background_color=050810&text_color=ffffff&primary_color=00F5D4"
+                  style={{ minWidth: 320, height: 700 }}
+                />
+              </div>
+
+              <div className="m-glass overflow-hidden" style={{ borderRadius: 16, width: "100%" }}>
+                <ContactFormCard preselectedService="video-editing" />
+              </div>
             </motion.div>
           </div>
         </div>
