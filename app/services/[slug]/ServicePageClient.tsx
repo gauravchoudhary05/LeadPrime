@@ -2,6 +2,7 @@
 
 import DynamicHero from '@/components/ui/DynamicHero';
 import FeatureGrid from '@/components/ui/FeatureGrid';
+import PortfolioShowcase from '@/components/ui/PortfolioShowcase';
 import LeadCaptureForm from '@/components/forms/LeadCaptureForm';
 import type { ServiceData } from '@/types';
 
@@ -41,6 +42,9 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
         gradientWord="Features"
         benefits={service.benefits}
       />
+
+      {/* Portfolio Showcase — only for 3D Website Building */}
+      {service.slug === '3d-website-building' && <PortfolioShowcase />}
 
       {/* Lead Capture Form (pre-selected service) */}
       <LeadCaptureForm

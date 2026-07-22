@@ -62,6 +62,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Full Name *
               </label>
               <input
+                suppressHydrationWarning
                 type="text"
                 className={`input-base ${errors.name ? 'border-red-500/50' : ''}`}
                 placeholder="John Doe"
@@ -79,6 +80,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Email *
               </label>
               <input
+                suppressHydrationWarning
                 type="email"
                 className={`input-base ${errors.email ? 'border-red-500/50' : ''}`}
                 placeholder="john@company.com"
@@ -100,6 +102,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Phone *
               </label>
               <input
+                suppressHydrationWarning
                 type="tel"
                 className={`input-base ${errors.phone ? 'border-red-500/50' : ''}`}
                 placeholder="+1 (234) 567-890"
@@ -117,6 +120,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Company
               </label>
               <input
+                suppressHydrationWarning
                 type="text"
                 className="input-base"
                 placeholder="Company name (optional)"
@@ -133,6 +137,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Service Needed *
               </label>
               <select
+                suppressHydrationWarning
                 className={`input-base appearance-none ${errors.service ? 'border-red-500/50' : ''}`}
                 value={formData.service || ''}
                 onChange={(e) => setField('service', e.target.value)}
@@ -157,6 +162,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
                 Budget Range
               </label>
               <select
+                suppressHydrationWarning
                 className="input-base appearance-none"
                 value={formData.budget || ''}
                 onChange={(e) => setField('budget', e.target.value || undefined)}
@@ -177,6 +183,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
               Message
             </label>
             <textarea
+              suppressHydrationWarning
               className="input-base min-h-[120px] resize-none"
               placeholder="Tell us about your project goals..."
               value={formData.message || ''}
@@ -195,6 +202,7 @@ export default function ContactFormCard({ preselectedService }: { preselectedSer
 
           {/* Submit Button */}
           <button
+            suppressHydrationWarning
             type="submit"
             disabled={isSubmitting}
             className="btn-primary w-full py-4 rounded-xl text-[15px] font-bold flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"

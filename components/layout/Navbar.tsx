@@ -76,7 +76,10 @@ export default function Navbar() {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <button className="flex items-center gap-1 text-[15px] text-[#94A3B8] hover:text-white transition-colors duration-200">
+                  <button 
+                    suppressHydrationWarning
+                    className="flex items-center gap-1 text-[15px] text-[#94A3B8] hover:text-white transition-colors duration-200"
+                  >
                     {link.label}
                     <ChevronDown
                       size={14}
@@ -121,6 +124,7 @@ export default function Navbar() {
 
             {/* Book a Call — Calendly popup */}
             <button
+              suppressHydrationWarning
               onClick={() => openCalendlyPopup()}
               className="calendly-book-btn"
             >
@@ -139,6 +143,7 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
+            suppressHydrationWarning
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 text-white hover:text-[#00E5C3] transition-colors"
             aria-label="Toggle menu"
@@ -163,6 +168,7 @@ export default function Navbar() {
                 link.hasDropdown ? (
                   <div key={link.label}>
                     <button
+                      suppressHydrationWarning
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
                       className="flex items-center justify-between w-full py-3 text-[16px] text-[#94A3B8] hover:text-white transition-colors"
                     >
@@ -210,6 +216,7 @@ export default function Navbar() {
 
               <div className="pt-4 space-y-3">
                 <button
+                  suppressHydrationWarning
                   onClick={() => {
                     closeMobileMenu();
                     openCalendlyPopup();
