@@ -78,7 +78,7 @@ export const useLeadStore = create<LeadFormState>((set, get) => ({
     set({ isSubmitting: true, errors: {}, hasError: false });
 
     try {
-      // Submit via FormSubmit to leadprime7@gmail.com
+      // Submit via FormSubmit to gaurav@leadprime.pro
       const requestBody = {
         name: result.data.name,
         email: result.data.email,
@@ -89,7 +89,7 @@ export const useLeadStore = create<LeadFormState>((set, get) => ({
         message: result.data.message || 'No message provided'
       };
 
-      const res = await fetch('https://formsubmit.co/ajax/leadprime7@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/gaurav@leadprime.pro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

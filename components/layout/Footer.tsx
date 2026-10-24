@@ -77,13 +77,20 @@ export default function Footer() {
               work.
             </p>
             <div className="flex gap-3">
-              {(['X', 'In', 'Ig', 'Yt'] as const).map((platform) => (
+              {([
+                { label: 'X', href: 'https://x.com/leadprime_ai?s=11' },
+                { label: 'In', href: 'https://www.linkedin.com/in/lead-prime-767564431/' },
+                { label: 'Ig', href: 'https://www.instagram.com/leadprime.ai?cplk=MWZmZG43ZDdma3Z6cg%3D%3D&utm_source=qr' },
+                { label: 'Yt', href: 'https://www.youtube.com/@LeadPrime7' },
+              ] as const).map((platform) => (
                 <a
-                  key={platform}
-                  href="#"
+                  key={platform.label}
+                  href={platform.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-[#111B2E] border border-[rgba(0,229,195,0.15)] flex items-center justify-center text-[#94A3B8] hover:text-[#00E5C3] hover:border-[#00E5C3]/40 transition-all duration-200 text-[12px] font-semibold"
                 >
-                  {platform}
+                  {platform.label}
                 </a>
               ))}
             </div>
@@ -154,21 +161,21 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#00E5C3] mt-0.5 shrink-0" />
                 <a
-                  href="mailto:founder@leadprime.pro"
+                  href="mailto:gaurav@leadprime.pro"
                   className="text-[14px] text-[#94A3B8] hover:text-white transition-colors"
                 >
-                  founder@leadprime.pro
+                  gaurav@leadprime.pro
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MessageCircle size={16} className="text-[#00E5C3] mt-0.5 shrink-0" />
                 <a
-                  href="https://wa.me/919352222316"
+                  href="https://wa.me/919251089743"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[14px] text-[#94A3B8] hover:text-white transition-colors"
                 >
-                  💬 WhatsApp Us
+                  💬 +91 92510 89743
                 </a>
               </li>
               <li className="flex items-start gap-3">

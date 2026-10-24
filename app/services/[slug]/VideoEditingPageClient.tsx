@@ -159,8 +159,8 @@ function ReelCard({ url, index }: { url: string; index: number }) {
       className="m-reel-card group"
     >
       {/* Invisible overlay to capture clicks and prevent Vimeo stealing them */}
-      <div 
-        className="absolute inset-0 z-10 cursor-pointer" 
+      <div
+        className="absolute inset-0 z-10 cursor-pointer"
         onClick={toggleMute}
       />
       <iframe
@@ -175,9 +175,9 @@ function ReelCard({ url, index }: { url: string; index: number }) {
         title={`Showreel ${index + 1}`}
         className="pointer-events-none"
       />
-      
+
       {/* Floating Unmute Toggle Button */}
-      <button 
+      <button
         onClick={toggleMute}
         className="absolute bottom-4 right-4 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-all opacity-0 group-hover:opacity-100 sm:opacity-100"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
@@ -250,6 +250,35 @@ export default function VideoEditingPageClient() {
                 {pill.emoji} {pill.label}
               </span>
             ))}
+          </motion.div>
+
+          {/* Verification Notice */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.28 }}
+            className="inline-flex mb-8"
+          >
+            <div
+              className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl"
+              style={{
+                background: 'rgba(0,229,195,0.04)',
+                border: '1px solid rgba(0,229,195,0.15)',
+              }}
+            >
+              <p className="text-[13px]" style={{ color: '#94A3B8' }}>
+                <span className="font-semibold" style={{ color: '#00E5C3' }}>⚠️ Security Notice: </span>
+                Unauthorized freelancers and agencies are falsely claiming our work. Do not make payments without verifying via{' '}
+                <a
+                  href="mailto:gaurav@leadprime.pro"
+                  className="font-semibold hover:underline transition-all duration-200"
+                  style={{ color: '#00E5C3' }}
+                >
+                  gaurav@leadprime.pro
+                </a>
+                .
+              </p>
+            </div>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -544,7 +573,7 @@ export default function VideoEditingPageClient() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919352222316"
+                href="https://wa.me/919251089743"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="m-card p-5 flex items-center gap-4 block"
@@ -554,13 +583,13 @@ export default function VideoEditingPageClient() {
                   <div className="text-[13px] font-semibold uppercase tracking-wider" style={{ color: 'var(--m-text-muted)' }}>
                     WhatsApp
                   </div>
-                  <div className="text-[15px] font-medium" style={{ color: 'var(--m-cyan)' }}>WhatsApp Us →</div>
+                  <div className="text-[15px] font-medium" style={{ color: 'var(--m-cyan)' }}>+91 92510 89743 →</div>
                 </div>
               </a>
 
               {/* Email */}
               <a
-                href="mailto:founder@leadprime.pro"
+                href="mailto:gaurav@leadprime.pro"
                 className="m-card p-5 flex items-center gap-4 block"
               >
                 <div className="m-icon-container">✉️</div>
@@ -568,7 +597,23 @@ export default function VideoEditingPageClient() {
                   <div className="text-[13px] font-semibold uppercase tracking-wider" style={{ color: 'var(--m-text-muted)' }}>
                     Email
                   </div>
-                  <div className="text-[15px] text-white font-medium">founder@leadprime.pro</div>
+                  <div className="text-[15px] text-white font-medium">gaurav@leadprime.pro</div>
+                </div>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/leadprime.ai?cplk=MWZmZG43ZDdma3Z6cg%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="m-card p-5 flex items-center gap-4 block"
+              >
+                <div className="m-icon-container">📸</div>
+                <div>
+                  <div className="text-[13px] font-semibold uppercase tracking-wider" style={{ color: 'var(--m-text-muted)' }}>
+                    Instagram
+                  </div>
+                  <div className="text-[15px] font-medium" style={{ color: 'var(--m-cyan)' }}>@leadprime.ai →</div>
                 </div>
               </a>
 

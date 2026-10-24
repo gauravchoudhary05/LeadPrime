@@ -62,10 +62,41 @@ export default function DynamicHero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[16px] sm:text-[18px] text-[#94A3B8] max-w-2xl mx-auto leading-relaxed mb-10"
+          className="text-[16px] sm:text-[18px] text-[#94A3B8] max-w-2xl mx-auto leading-relaxed mb-8"
         >
           {subtitle}
         </motion.p>
+
+        {/* Verification Notice */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.28 }}
+          className="inline-flex mb-8"
+        >
+          <div
+            className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl"
+            style={{
+              background: 'rgba(0,229,195,0.04)',
+              border: '1px solid rgba(0,229,195,0.15)',
+            }}
+          >
+
+            {/* Text */}
+            <p className="text-[13px]" style={{ color: '#94A3B8' }}>
+              <span className="font-semibold" style={{ color: '#00E5C3' }}>⚠️ Security Notice: </span>
+              Unauthorized freelancers and agencies are falsely claiming our work. Do not make payments without verifying via{' '}
+              <a
+                href="mailto:gaurav@leadprime.pro"
+                className="font-semibold hover:underline transition-all duration-200"
+                style={{ color: '#00E5C3' }}
+              >
+                gaurav@leadprime.pro
+              </a>
+              .
+            </p>
+          </div>
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
